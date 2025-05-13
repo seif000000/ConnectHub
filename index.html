@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectHub - Social Media Forum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="pages/forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="pages/search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="pages/messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="pages/notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="logged-out-controls">
+                    <a href="pages/login.html" class="btn btn-login">Login</a>
+                    <a href="pages/register.html" class="btn btn-register">Register</a>
+                </div>
+                <div class="logged-in-controls hide">
+                    <a href="pages/create-post.html" class="btn btn-create-post"><i class="fas fa-plus"></i> <span>Create Post</span></a>
+                    <div class="user-profile-menu">
+                        <img src="assets/images/default-avatar.png" alt="User Profile" class="avatar-small">
+                        <div class="dropdown-menu">
+                            <a href="pages/profile.html"><i class="fas fa-user"></i> Profile</a>
+                            <a href="pages/user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="pages/settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="content-grid">
+            <!-- Left Sidebar -->
+            <aside class="sidebar sidebar-left">
+                <div class="widget categories-widget">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-laptop-code"></i> Technology</a></li>
+                        <li><a href="#"><i class="fas fa-film"></i> Entertainment</a></li>
+                        <li><a href="#"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Education</a></li>
+                        <li><a href="#"><i class="fas fa-dumbbell"></i> Health & Fitness</a></li>
+                        <li><a href="#"><i class="fas fa-utensils"></i> Food</a></li>
+                        <li><a href="#"><i class="fas fa-palette"></i> Art & Design</a></li>
+                        <li><a href="#" class="view-more">View More...</a></li>
+                    </ul>
+                </div>
+                <div class="widget trending-widget">
+                    <h3>Trending Topics</h3>
+                    <ul class="trending-topics">
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#WebDevelopment</span>
+                                <span class="post-count">1.2k posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#ArtificialIntelligence</span>
+                                <span class="post-count">856 posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#HealthyLiving</span>
+                                <span class="post-count">723 posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#SummerVacation</span>
+                                <span class="post-count">512 posts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Feed -->
+            <section class="post-feed">
+                <!-- Feed Filter -->
+                <div class="feed-filter">
+                    <div class="filter-options">
+                        <button class="active" data-filter="latest">Latest</button>
+                        <button data-filter="trending">Trending</button>
+                        <button data-filter="following">Following</button>
+                    </div>
+                </div>
+
+                <!-- Posts Container -->
+                <div class="posts-container">
+                    <!-- Sample Post 1 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="assets/images/user-avatar-1.jpg" alt="User Avatar" class="avatar-small">
+                            <div class="post-info">
+                                <div class="post-author">
+                                    <a href="pages/profile.html" class="author-name">John Doe</a>
+                                    <span class="verified-badge" title="Verified User"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-time">2 hours ago</span>
+                                    <span class="post-category"><a href="#">Technology</a></span>
+                                </div>
+                            </div>
+                            <div class="post-actions-menu">
+                                <button class="post-menu-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#"><i class="fas fa-bookmark"></i> Save</a>
+                                    <a href="#"><i class="fas fa-flag"></i> Report</a>
+                                    <a href="#"><i class="fas fa-volume-mute"></i> Mute</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Just finished building my new developer portfolio website using React and TailwindCSS. Check it out and let me know what you think!</p>
+                            <img src="assets/images/post-image-1.jpg" alt="Portfolio Website Screenshot" class="post-image">
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-reactions">
+                                <button class="reaction-btn like-btn"><i class="far fa-heart"></i> <span>124</span></button>
+                                <button class="reaction-btn comment-btn"><i class="far fa-comment"></i> <span>34</span></button>
+                                <button class="reaction-btn share-btn"><i class="far fa-share-square"></i> <span>12</span></button>
+                            </div>
+                        </div>
+                        <div class="comments-section">
+                            <div class="comments-container">
+                                <div class="comment">
+                                    <img src="assets/images/user-avatar-2.jpg" alt="Commenter Avatar" class="avatar-small">
+                                    <div class="comment-content">
+                                        <div class="comment-header">
+                                            <a href="#" class="commenter-name">Jane Smith</a>
+                                            <span class="comment-time">45 min ago</span>
+                                        </div>
+                                        <p>This looks amazing! Could you share which animations library you used?</p>
+                                        <div class="comment-actions">
+                                            <button class="comment-like-btn"><i class="far fa-heart"></i> <span>8</span></button>
+                                            <button class="comment-reply-btn">Reply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="comment-form">
+                                <img src="assets/images/default-avatar.png" alt="Your Avatar" class="avatar-small">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button type="submit" class="submit-comment-btn"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </article>
+
+                    <!-- Sample Post 2 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="assets/images/user-avatar-3.jpg" alt="User Avatar" class="avatar-small">
+                            <div class="post-info">
+                                <div class="post-author">
+                                    <a href="pages/profile.html" class="author-name">Alex Johnson</a>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-time">Yesterday</span>
+                                    <span class="post-category"><a href="#">Gaming</a></span>
+                                </div>
+                            </div>
+                            <div class="post-actions-menu">
+                                <button class="post-menu-btn"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>What's your favorite game release of the year so far? I'm torn between Elden Ring and Horizon Forbidden West!</p>
+                            <div class="post-poll">
+                                <h4>Vote for your favorite:</h4>
+                                <div class="poll-options">
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" name="game-poll" id="option1">
+                                            <label for="option1">Elden Ring</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 65%"></div>
+                                            <span class="poll-percentage">65%</span>
+                                        </div>
+                                    </div>
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" name="game-poll" id="option2">
+                                            <label for="option2">Horizon Forbidden West</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 28%"></div>
+                                            <span class="poll-percentage">28%</span>
+                                        </div>
+                                    </div>
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" name="game-poll" id="option3">
+                                            <label for="option3">Other (comment below)</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 7%"></div>
+                                            <span class="poll-percentage">7%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="poll-footer">
+                                    <span class="total-votes">243 votes</span>
+                                    <span class="poll-time-left">2 days left</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-reactions">
+                                <button class="reaction-btn like-btn"><i class="far fa-heart"></i> <span>87</span></button>
+                                <button class="reaction-btn comment-btn"><i class="far fa-comment"></i> <span>42</span></button>
+                                <button class="reaction-btn share-btn"><i class="far fa-share-square"></i> <span>5</span></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Load More Posts Button -->
+                    <button class="load-more-btn">Load More Posts</button>
+                </div>
+            </section>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar sidebar-right">
+                <div class="widget who-to-follow">
+                    <h3>Who to Follow</h3>
+                    <ul class="user-suggestions">
+                        <li class="user-suggestion">
+                            <img src="assets/images/user-avatar-4.jpg" alt="Suggested User" class="avatar-small">
+                            <div class="user-info">
+                                <a href="#" class="user-name">Emily Chen</a>
+                                <span class="user-meta">Web Designer</span>
+                            </div>
+                            <button class="follow-btn">Follow</button>
+                        </li>
+                        <li class="user-suggestion">
+                            <img src="assets/images/user-avatar-5.jpg" alt="Suggested User" class="avatar-small">
+                            <div class="user-info">
+                                <a href="#" class="user-name">Michael Wilson</a>
+                                <span class="user-meta">Frontend Developer</span>
+                            </div>
+                            <button class="follow-btn">Follow</button>
+                        </li>
+                        <li class="user-suggestion">
+                            <img src="assets/images/user-avatar-6.jpg" alt="Suggested User" class="avatar-small">
+                            <div class="user-info">
+                                <a href="#" class="user-name">Sarah Miller</a>
+                                <span class="user-meta">UX Researcher</span>
+                            </div>
+                            <button class="follow-btn">Follow</button>
+                        </li>
+                    </ul>
+                    <a href="#" class="see-more">See More</a>
+                </div>
+                <div class="widget advertisement">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-content">
+                        <img src="assets/images/ad-placeholder.jpg" alt="Advertisement">
+                    </div>
+                </div>
+                <div class="widget upcoming-events">
+                    <h3>Upcoming Events</h3>
+                    <ul class="event-list">
+                        <li class="event">
+                            <div class="event-date">
+                                <span class="month">May</span>
+                                <span class="day">24</span>
+                            </div>
+                            <div class="event-details">
+                                <h4 class="event-title">Web Dev Conference 2023</h4>
+                                <p class="event-location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                                <div class="event-attendance">
+                                    <span class="attendees-count">156 Going</span>
+                                    <button class="interested-btn">Interested</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="event">
+                            <div class="event-date">
+                                <span class="month">Jun</span>
+                                <span class="day">12</span>
+                            </div>
+                            <div class="event-details">
+                                <h4 class="event-title">UI/UX Design Workshop</h4>
+                                <p class="event-location"><i class="fas fa-map-marker-alt"></i> Online</p>
+                                <div class="event-attendance">
+                                    <span class="attendees-count">89 Going</span>
+                                    <button class="interested-btn">Interested</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/forum.html">Forums</a></li>
+                        <li><a href="pages/search.html">Search</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="pages/help.html">Help Center</a></li>
+                        <li><a href="pages/terms.html">Terms of Service</a></li>
+                        <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                        <li><a href="pages/guidelines.html">Community Guidelines</a></li>
+                        <li><a href="pages/cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                    <h4>Subscribe to Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div class="notification-toast" id="notification-toast">
+        <div class="notification-content">
+            <i class="notification-icon fas fa-bell"></i>
+            <div class="notification-text">
+                <p class="notification-message">New notification message</p>
+                <span class="notification-time">Just now</span>
+            </div>
+        </div>
+        <button class="close-notification"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="active"><i class="fas fa-home"></i></a>
+        <a href="pages/forum.html"><i class="fas fa-comments"></i></a>
+        <a href="pages/create-post.html"><i class="fas fa-plus-circle"></i></a>
+        <a href="pages/messages.html"><i class="fas fa-envelope"></i></a>
+        <a href="pages/profile.html"><i class="fas fa-user"></i></a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/notifications.js"></script>
+</body>
+</html>

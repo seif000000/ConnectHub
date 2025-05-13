@@ -1,0 +1,249 @@
+/* Responsive styles for ConnectHub */
+
+/* Tablets and smaller desktops */
+@media screen and (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 200px 1fr 250px;
+        gap: var(--spacing-md);
+    }
+    
+    .main-nav a span {
+        display: none;
+    }
+    
+    .main-nav a i {
+        margin-right: 0;
+        font-size: 1.3rem;
+    }
+    
+    .btn-create-post span {
+        display: none;
+    }
+}
+
+/* Medium sized tablets */
+@media screen and (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    
+    .main-header .container {
+        padding: var(--spacing-sm);
+    }
+    
+    .main-nav {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    /* Mobile menu active state */
+    .mobile-menu-active .main-nav {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: var(--box-shadow-md);
+        z-index: 90;
+    }
+    
+    .mobile-menu-active .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .mobile-menu-active .main-nav a {
+        padding: var(--spacing-md);
+        border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .mobile-menu-active .main-nav a span {
+        display: inline;
+    }
+    
+    .mobile-menu-active .main-nav a i {
+        margin-right: var(--spacing-sm);
+    }
+    
+    .mobile-menu-active .mobile-menu-toggle .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .mobile-menu-active .mobile-menu-toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-active .mobile-menu-toggle .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .mobile-bottom-nav {
+        display: flex;
+    }
+    
+    .main-content {
+        margin-bottom: 70px; /* Space for mobile bottom nav */
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 600px) {
+    .main-header .container {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .user-controls .btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+    
+    .btn-create-post {
+        display: none; /* It's in the mobile bottom nav */
+    }
+    
+    .post-header {
+        flex-wrap: wrap;
+    }
+    
+    .post-actions-menu {
+        margin-left: auto;
+    }
+    
+    .post-meta {
+        width: 100%;
+        margin-top: var(--spacing-xs);
+        margin-left: 50px; /* Align with user name */
+    }
+    
+    .post-content {
+        padding: var(--spacing-md);
+    }
+    
+    .poll-option {
+        flex-direction: column;
+    }
+    
+    .poll-progress {
+        margin-left: 0;
+    }
+    
+    .post-reactions {
+        justify-content: space-between;
+    }
+    
+    .comment-form {
+        flex-wrap: wrap;
+    }
+    
+    .comment-input {
+        width: calc(100% - 50px);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .notification-toast {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+    }
+    
+    /* Show categories on mobile */
+    .main-content .sidebar-left {
+        display: block;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .main-content .sidebar-left .widget {
+        padding: var(--spacing-sm);
+    }
+    
+    .categories-widget ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+    
+    .categories-widget li {
+        margin-bottom: 0;
+    }
+    
+    .categories-widget a {
+        padding: var(--spacing-xs);
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
+    /* For very small screens */
+    @media screen and (max-width: 400px) {
+        .post-author {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .verified-badge {
+            margin-left: 0;
+        }
+    }
+}
+
+/* Print styles */
+@media print {
+    .main-header,
+    .main-nav,
+    .sidebar,
+    .mobile-bottom-nav,
+    .post-footer,
+    .comment-form,
+    .main-footer,
+    .notification-toast,
+    .load-more-btn,
+    .post-actions-menu,
+    .btn {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .content-grid {
+        display: block;
+    }
+    
+    .post {
+        break-inside: avoid;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
