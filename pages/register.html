@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body class="auth-page">
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="logged-out-controls">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-register active">Register</a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Create an Account</h2>
+                <p>Join ConnectHub to connect with others and share your interests!</p>
+            </div>
+            
+            <form class="auth-form" id="register-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                        <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-meter">
+                            <div class="meter-bar"></div>
+                        </div>
+                        <span class="strength-text">Password strength</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password-confirm">Confirm Password</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" id="password-confirm" name="password-confirm" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+
+                <div class="auth-divider">
+                    <span>Or register with</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google-btn">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </button>
+                    <button type="button" class="social-btn facebook-btn">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="forum.html">Forums</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="guidelines.html">Community Guidelines</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
