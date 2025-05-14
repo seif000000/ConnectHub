@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body class="settings-page">
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="logged-in-controls">
+                    <div class="user-profile-menu">
+                        <button class="profile-menu-toggle">
+                            <img src="../assets/images/default-avatar.png" alt="User Avatar" class="avatar-small">
+                            <span class="username">User</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="logged-out-controls hide">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-register">Register</a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="settings-container">
+            <div class="settings-sidebar">
+                <h2>Settings</h2>
+                <ul class="settings-nav">
+                    <li><a href="#account" class="active" data-section="account-settings"><i class="fas fa-user-circle"></i> Account</a></li>
+                    <li><a href="#profile" data-section="profile-settings"><i class="fas fa-id-card"></i> Profile</a></li>
+                    <li><a href="#privacy" data-section="privacy-settings"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+                    <li><a href="#notifications" data-section="notification-settings"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a href="#appearance" data-section="appearance-settings"><i class="fas fa-palette"></i> Appearance</a></li>
+                    <li><a href="#security" data-section="security-settings"><i class="fas fa-lock"></i> Security</a></li>
+                    <li><a href="#connected" data-section="connected-accounts"><i class="fas fa-link"></i> Connected Accounts</a></li>
+                    <li><a href="#data" data-section="data-settings"><i class="fas fa-database"></i> Data Management</a></li>
+                </ul>
+            </div>
+            
+            <div class="settings-content">
+                <!-- Account Settings -->
+                <section id="account-settings" class="settings-section active">
+                    <div class="settings-header">
+                        <h3>Account Settings</h3>
+                        <p>Manage your account details and preferences</p>
+                    </div>
+                    
+                    <form id="account-form" class="settings-form">
+                        <div class="form-group">
+                            <label for="account-username">Username</label>
+                            <input type="text" id="account-username" name="username" value="">
+                            <small>This is your unique identifier on ConnectHub</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="account-email">Email Address</label>
+                            <input type="email" id="account-email" name="email" value="">
+                            <small>Your email is used for notifications and recovery</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="account-language">Display Language</label>
+                            <select id="account-language" name="language">
+                                <option value="en">English (US)</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="ja">日本語</option>
+                                <option value="zh">中文</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="account-timezone">Timezone</label>
+                            <select id="account-timezone" name="timezone">
+                                <option value="UTC-12:00">(UTC-12:00) International Date Line West</option>
+                                <option value="UTC-11:00">(UTC-11:00) Coordinated Universal Time-11</option>
+                                <option value="UTC-10:00">(UTC-10:00) Hawaii</option>
+                                <option value="UTC-09:00">(UTC-09:00) Alaska</option>
+                                <option value="UTC-08:00">(UTC-08:00) Pacific Time (US & Canada)</option>
+                                <option value="UTC-07:00">(UTC-07:00) Mountain Time (US & Canada)</option>
+                                <option value="UTC-06:00">(UTC-06:00) Central Time (US & Canada)</option>
+                                <option value="UTC-05:00">(UTC-05:00) Eastern Time (US & Canada)</option>
+                                <option value="UTC-04:00">(UTC-04:00) Atlantic Time (Canada)</option>
+                                <option value="UTC-03:00">(UTC-03:00) Brasilia</option>
+                                <option value="UTC-02:00">(UTC-02:00) Coordinated Universal Time-02</option>
+                                <option value="UTC-01:00">(UTC-01:00) Cape Verde Is.</option>
+                                <option value="UTC+00:00">(UTC+00:00) London, Dublin, Edinburgh</option>
+                                <option value="UTC+01:00">(UTC+01:00) Paris, Amsterdam, Berlin</option>
+                                <option value="UTC+02:00">(UTC+02:00) Cairo, Athens, Istanbul</option>
+                                <option value="UTC+03:00">(UTC+03:00) Moscow, St. Petersburg</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                    
+                    <div class="danger-zone">
+                        <h4>Danger Zone</h4>
+                        <p>Actions here cannot be undone. Please proceed with caution.</p>
+                        
+                        <div class="danger-actions">
+                            <button type="button" class="btn btn-outline-danger" id="deactivate-account">Deactivate Account</button>
+                            <button type="button" class="btn btn-danger" id="delete-account">Delete Account Permanently</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Profile Settings -->
+                <section id="profile-settings" class="settings-section">
+                    <div class="settings-header">
+                        <h3>Profile Settings</h3>
+                        <p>Manage your public profile information</p>
+                    </div>
+                    
+                    <form id="profile-form" class="settings-form">
+                        <div class="form-group profile-picture-upload">
+                            <label>Profile Picture</label>
+                            <div class="profile-picture-container">
+                                <img src="../assets/images/default-avatar.png" alt="Profile Picture" id="profile-picture-preview">
+                                <div class="upload-controls">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" id="upload-profile-picture">
+                                        <i class="fas fa-upload"></i> Upload New
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger" id="remove-profile-picture">
+                                        <i class="fas fa-trash-alt"></i> Remove
+                                    </button>
+                                </div>
+                                <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-display-name">Display Name</label>
+                            <input type="text" id="profile-display-name" name="displayName" placeholder="Your public display name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-bio">Bio</label>
+                            <textarea id="profile-bio" name="bio" rows="4" placeholder="Write a short bio about yourself"></textarea>
+                            <small><span id="bio-char-count">0</span>/160 characters</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-location">Location</label>
+                            <input type="text" id="profile-location" name="location" placeholder="Your city or country">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-website">Website</label>
+                            <input type="url" id="profile-website" name="website" placeholder="Your website URL">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Social Links</label>
+                            <div class="social-link-group">
+                                <div class="input-group">
+                                    <span class="input-icon"><i class="fab fa-twitter"></i></span>
+                                    <input type="text" id="profile-twitter" name="twitter" placeholder="Twitter username">
+                                </div>
+                            </div>
+                            <div class="social-link-group">
+                                <div class="input-group">
+                                    <span class="input-icon"><i class="fab fa-facebook"></i></span>
+                                    <input type="text" id="profile-facebook" name="facebook" placeholder="Facebook username">
+                                </div>
+                            </div>
+                            <div class="social-link-group">
+                                <div class="input-group">
+                                    <span class="input-icon"><i class="fab fa-instagram"></i></span>
+                                    <input type="text" id="profile-instagram" name="instagram" placeholder="Instagram username">
+                                </div>
+                            </div>
+                            <div class="social-link-group">
+                                <div class="input-group">
+                                    <span class="input-icon"><i class="fab fa-linkedin"></i></span>
+                                    <input type="text" id="profile-linkedin" name="linkedin" placeholder="LinkedIn username">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Save Profile</button>
+                    </form>
+                </section>
+                
+                <!-- Privacy Settings -->
+                <section id="privacy-settings" class="settings-section">
+                    <div class="settings-header">
+                        <h3>Privacy Settings</h3>
+                        <p>Control your privacy and visibility options</p>
+                    </div>
+                    
+                    <form id="privacy-form" class="settings-form">
+                        <div class="form-group">
+                            <label>Profile Visibility</label>
+                            <div class="setting-option">
+                                <div class="setting-toggle">
+                                    <select id="profile-visibility" name="profileVisibility">
+                                        <option value="public">Public - Anyone can view your profile</option>
+                                        <option value="members">Members Only - Only registered users can view your profile</option>
+                                        <option value="connections">Connections Only - Only your connections can view your profile</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Online Status</label>
+                            <div class="setting-option">
+                                <div class="setting-toggle">
+                                    <select id="online-status-visibility" name="onlineStatusVisibility">
+                                        <option value="everyone">Everyone can see when I'm online</option>
+                                        <option value="connections">Only my connections can see when I'm online</option>
+                                        <option value="nobody">No one can see when I'm online</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Post Comments</label>
+                            <div class="setting-option">
+                                <div class="setting-toggle">
+                                    <select id="comment-permission" name="commentPermission">
+                                        <option value="everyone">Everyone can comment on your posts</option>
+                                        <option value="connections">Only your connections can comment on your posts</option>
+                                        <option value="nobody">No one can comment on your posts</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Connection Requests</label>
+                            <div class="setting-option">
+                                <div class="setting-toggle">
+                                    <select id="connection-requests" name="connectionRequests">
+                                        <option value="everyone">Everyone can send you connection requests</option>
+                                        <option value="mutual">Only people with mutual connections can send requests</option>
+                                        <option value="nobody">No one can send you connection requests</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Search Visibility</label>
+                            <div class="setting-option">
+                                <div class="setting-checkbox">
+                                    <input type="checkbox" id="search-engines" name="searchEngines" checked>
+                                    <label for="search-engines">Allow search engines to index your profile</label>
+                                </div>
+                            </div>
+                            <div class="setting-option">
+                                <div class="setting-checkbox">
+                                    <input type="checkbox" id="site-search" name="siteSearch" checked>
+                                    <label for="site-search">Show in ConnectHub search results</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Save Privacy Settings</button>
+                    </form>
+                </section>
+                
+                <!-- Notification Settings -->
+                <section id="notification-settings" class="settings-section">
+                    <div class="settings-header">
+                        <h3>Notification Settings</h3>
+                        <p>Customize how and when you receive notifications</p>
+                    </div>
+                    
+                    <form id="notification-form" class="settings-form">
+                        <div class="form-group notification-category">
+                            <h4>Email Notifications</h4>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Comments on your posts</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="email-comments" name="emailComments" class="toggle-switch" checked>
+                                    <label for="email-comments" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Likes on your posts</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="email-likes" name="emailLikes" class="toggle-switch">
+                                    <label for="email-likes" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>New connection requests</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="email-connections" name="emailConnections" class="toggle-switch" checked>
+                                    <label for="email-connections" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Direct messages</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="email-messages" name="emailMessages" class="toggle-switch" checked>
+                                    <label for="email-messages" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Forum activity</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="email-forum" name="emailForum" class="toggle-switch">
+                                    <label for="email-forum" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Newsletter and site updates</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="email-updates" name="emailUpdates" class="toggle-switch" checked>
+                                    <label for="email-updates" class="toggle-label"></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group notification-category">
+                            <h4>Push Notifications</h4>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Enable push notifications</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="push-enable" name="pushEnable" class="toggle-switch" checked>
+                                    <label for="push-enable" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Comments on your posts</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="push-comments" name="pushComments" class="toggle-switch" checked>
+                                    <label for="push-comments" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Likes on your posts</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="push-likes" name="pushLikes" class="toggle-switch" checked>
+                                    <label for="push-likes" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>New connection requests</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="push-connections" name="pushConnections" class="toggle-switch" checked>
+                                    <label for="push-connections" class="toggle-label"></label>
+                                </div>
+                            </div>
+                            
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Direct messages</span>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="push-messages" name="pushMessages" class="toggle-switch" checked>
+                                    <label for="push-messages" class="toggle-label"></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Save Notification Settings</button>
+                    </form>
+                </section>
+                
+                <!-- Appearance Settings -->
+                <section id="appearance-settings" class="settings-section">
+                    <div class="settings-header">
+                        <h3>Appearance Settings</h3>
+                        <p>Customize the look and feel of ConnectHub</p>
+                    </div>
+                    
+                    <form id="appearance-form" class="settings-form">
+                        <div class="form-group">
+                            <label>Theme</label>
+                            <div class="theme-options">
+                                <div class="theme-option">
+                                    <input type="radio" id="theme-light" name="theme" value="light" checked>
+                                    <label for="theme-light" class="theme-preview light-theme">
+                                        <div class="theme-preview-header"></div>
+                                        <div class="theme-preview-content">
+                                            <div class="theme-preview-sidebar"></div>
+                                            <div class="theme-preview-main"></div>
+                                        </div>
+                                        <span>Light</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="theme-option">
+                                    <input type="radio" id="theme-dark" name="theme" value="dark">
+                                    <label for="theme-dark" class="theme-preview dark-theme">
+                                        <div class="theme-preview-header"></div>
+                                        <div class="theme-preview-content">
+                                            <div class="theme-preview-sidebar"></div>
+                                            <div class="theme-preview-main"></div>
+                                        </div>
+                                        <span>Dark</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="theme-option">
+                                    <input type="radio" id="theme-system" name="theme" value="system">
+                                    <label for="theme-system" class="theme-preview system-theme">
+                                        <div class="theme-preview-header"></div>
+                                        <div class="theme-preview-content">
+                                            <div class="theme-preview-sidebar"></div>
+                                            <div class="theme-preview-main"></div>
+                                        </div>
+                                        <span>System Default</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Accent Color</label>
+                            <div class="color-options">
+                                <div class="color-option">
+                                    <input type="radio" id="color-blue" name="accentColor" value="blue" checked>
+                                    <label for="color-blue" class="color-swatch blue"></label>
+                                </div>
+                                
+                                <div class="color-option">
+                                    <input type="radio" id="color-green" name="accentColor" value="green">
+                                    <label for="color-green" class="color-swatch green"></label>
+                                </div>
+                                
+                                <div class="color-option">
+                                    <input type="radio" id="color-purple" name="accentColor" value="purple">
+                                    <label for="color-purple" class="color-swatch purple"></label>
+                                </div>
+                                
+                                <div class="color-option">
+                                    <input type="radio" id="color-orange" name="accentColor" value="orange">
+                                    <label for="color-orange" class="color-swatch orange"></label>
+                                </div>
+                                
+                                <div class="color-option">
+                                    <input type="radio" id="color-red" name="accentColor" value="red">
+                                    <label for="color-red" class="color-swatch red"></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Font Size</label>
+                            <div class="range-control">
+                                <input type="range" id="font-size" name="fontSize" min="12" max="20" step="1" value="16">
+                                <div class="range-values">
+                                    <span>Small</span>
+                                    <span id="font-size-value">16px</span>
+                                    <span>Large</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Layout Density</label>
+                            <div class="button-group">
+                                <input type="radio" id="layout-compact" name="layoutDensity" value="compact">
+                                <label for="layout-compact" class="btn btn-outline">Compact</label>
+                                
+                                <input type="radio" id="layout-comfortable" name="layoutDensity" value="comfortable" checked>
+                                <label for="layout-comfortable" class="btn btn-outline">Comfortable</label>
+                                
+                                <input type="radio" id="layout-spacious" name="layoutDensity" value="spacious">
+                                <label for="layout-spacious" class="btn btn-outline">Spacious</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Save Appearance Settings</button>
+                    </form>
+                </section>
+                
+                <!-- Security Settings -->
+                <section id="security-settings" class="settings-section">
+                    <div class="settings-header">
+                        <h3>Security Settings</h3>
+                        <p>Manage your account security and authentication options</p>
+                    </div>
+                    
+                    <form id="password-form" class="settings-form">
+                        <h4>Change Password</h4>
+                        
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                                <input type="password" id="current-password" name="currentPassword" placeholder="Enter your current password">
+                                <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                                <input type="password" id="new-password" name="newPassword" placeholder="Create a new password">
+                                <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="password-strength">
+                                <div class="strength-meter">
+                                    <div class="meter-bar"></div>
+                                </div>
+                                <span class="strength-text">Password strength</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                                <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm your new password">
+                                <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </form>
+                    
+                    <div class="form-divider"></div>
+                    
+                    <form id="security-form" class="settings-form">
+                        <h4>Two-Factor Authentication</h4>
+                        
+                        <div class="form-group">
+                            <div class="setting-option">
+                                <div class="setting-label">
+                                    <span>Enable Two-Factor Authentication</span>
+                                    <small>Add an extra layer of security to your account by requiring a verification code in addition to your password.</small>
+                                </div>
+                                <div class="setting-toggle">
+                                    <input type="checkbox" id="two-factor" name="twoFactor" class="toggle-switch">
+                                    <label for="two-factor" class="toggle-label"></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="two-factor-setup" class="two-factor-container" style="display: none;">
+                            <div class="two-factor-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>Scan QR Code</h5>
+                                        <p>Scan this QR code with your authenticator app</p>
+                                        <div class="qr-code-placeholder">
+                                            <i class="fas fa-qrcode"></i>
+                                            <span>QR Code will appear here when enabled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="step">
+                                    <div class="step-number">2</div>

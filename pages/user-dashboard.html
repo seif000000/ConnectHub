@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="user-profile-menu">
+                    <img src="../img/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                    <div class="dropdown-menu">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="user-dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="dashboard-header">
+            <h2>Dashboard</h2>
+            <p>Welcome back, <span class="user-name">UserName</span>! Here's an overview of your activity.</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Stats Cards -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>12</h3>
+                        <p>Posts</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>48</h3>
+                        <p>Comments</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>156</h3>
+                        <p>Likes</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>23</h3>
+                        <p>Followers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h3>Recent Activity</h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><span class="activity-user">JohnDoe</span> liked your post <a href="#">"The Future of Web Development"</a></p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><span class="activity-user">JaneSmith</span> commented on your post <a href="#">"Best Practices for UI Design"</a></p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><span class="activity-user">MikeBrown</span> started following you</p>
+                            <span class="activity-time">Yesterday</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><span class="activity-user">SarahJohnson</span> shared your post <a href="#">"Introduction to Machine Learning"</a></p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your Posts -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h3>Your Recent Posts</h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="user-posts">
+                    <div class="dashboard-post-item">
+                        <div class="post-stats">
+                            <div class="stat">
+                                <i class="fas fa-heart"></i>
+                                <span>42</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-comment"></i>
+                                <span>13</span>
+                            </div>
+                        </div>
+                        <div class="post-details">
+                            <h4><a href="#">The Future of Web Development</a></h4>
+                            <div class="post-meta">
+                                <span class="post-category"><i class="fas fa-folder"></i> Technology</span>
+                                <span class="post-date"><i class="fas fa-clock"></i> May 12, 2023</span>
+                            </div>
+                            <div class="post-preview">
+                                <p>Web development continues to evolve at a rapid pace. In this post, we explore emerging technologies and trends that will shape the...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-post-item">
+                        <div class="post-stats">
+                            <div class="stat">
+                                <i class="fas fa-heart"></i>
+                                <span>27</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-comment"></i>
+                                <span>8</span>
+                            </div>
+                        </div>
+                        <div class="post-details">
+                            <h4><a href="#">Best Practices for UI Design</a></h4>
+                            <div class="post-meta">
+                                <span class="post-category"><i class="fas fa-folder"></i> Design</span>
+                                <span class="post-date"><i class="fas fa-clock"></i> May 5, 2023</span>
+                            </div>
+                            <div class="post-preview">
+                                <p>A well-designed user interface can make or break your application. Here are some best practices to enhance usability and...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-post-item">
+                        <div class="post-stats">
+                            <div class="stat">
+                                <i class="fas fa-heart"></i>
+                                <span>35</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-comment"></i>
+                                <span>21</span>
+                            </div>
+                        </div>
+                        <div class="post-details">
+                            <h4><a href="#">Introduction to Machine Learning</a></h4>
+                            <div class="post-meta">
+                                <span class="post-category"><i class="fas fa-folder"></i> AI & ML</span>
+                                <span class="post-date"><i class="fas fa-clock"></i> April 28, 2023</span>
+                            </div>
+                            <div class="post-preview">
+                                <p>Machine learning is revolutionizing industries across the globe. This beginner-friendly introduction covers the fundamental...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drafts -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h3>Drafts</h3>
+                    <a href="#" class="create-draft">Create New</a>
+                </div>
+                <div class="drafts-list">
+                    <div class="draft-item">
+                        <div class="draft-details">
+                            <h4>CSS Grid vs Flexbox: When to Use Each</h4>
+                            <span class="draft-date">Last edited: May 10, 2023</span>
+                        </div>
+                        <div class="draft-actions">
+                            <a href="#" class="edit-btn"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="delete-btn"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="draft-item">
+                        <div class="draft-details">
+                            <h4>Understanding JavaScript Promises</h4>
+                            <span class="draft-date">Last edited: May 7, 2023</span>
+                        </div>
+                        <div class="draft-actions">
+                            <a href="#" class="edit-btn"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="delete-btn"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="forum.html">Forums</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="guidelines.html">Community Guidelines</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html" class="active"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="logged-out-controls">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-register">Register</a>
+                </div>
+                <!-- User logged in controls (initially hidden) -->
+                <div class="logged-in-controls hide">
+                    <div class="user-profile-menu">
+                        <img src="../img/default-avatar.png" alt="User Avatar" class="avatar-small">
+                        <div class="dropdown-menu">
+                            <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="messages-container">
+            <div class="messages-sidebar">
+                <div class="messages-header">
+                    <h2>Messages</h2>
+                    <div class="messages-actions">
+                        <button class="new-message-btn"><i class="fas fa-plus"></i> New Message</button>
+                        <button class="messages-settings-btn"><i class="fas fa-cog"></i></button>
+                    </div>
+                </div>
+                <div class="messages-search">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search messages">
+                    </div>
+                </div>
+                <div class="messages-filter">
+                    <button class="filter-btn active" data-filter="all">All Messages</button>
+                    <button class="filter-btn" data-filter="unread">Unread</button>
+                    <button class="filter-btn" data-filter="starred">Starred</button>
+                </div>
+                <div class="conversation-list">
+                    <div class="conversation active">
+                        <div class="conversation-avatar">
+                            <img src="../img/avatar-1.jpg" alt="Jane Smith">
+                            <span class="status-indicator online"></span>
+                        </div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <span class="conversation-name">Jane Smith</span>
+                                <span class="conversation-time">2m</span>
+                            </div>
+                            <div class="conversation-message">
+                                <p>Hey there! Just checking in about the upcoming event...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversation unread">
+                        <div class="conversation-avatar">
+                            <img src="../img/avatar-2.jpg" alt="Michael Johnson">
+                            <span class="status-indicator offline"></span>
+                        </div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <span class="conversation-name">Michael Johnson</span>
+                                <span class="conversation-time">1h</span>
+                            </div>
+                            <div class="conversation-message">
+                                <p>I've shared that article you were looking for!</p>
+                                <span class="unread-indicator">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversation">
+                        <div class="conversation-avatar">
+                            <img src="../img/avatar-3.jpg" alt="Sarah Williams">
+                            <span class="status-indicator away"></span>
+                        </div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <span class="conversation-name">Sarah Williams</span>
+                                <span class="conversation-time">Yesterday</span>
+                            </div>
+                            <div class="conversation-message">
+                                <p>Thanks for your help with the project!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversation">
+                        <div class="conversation-avatar">
+                            <img src="../img/avatar-4.jpg" alt="David Thompson">
+                            <span class="status-indicator online"></span>
+                        </div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <span class="conversation-name">David Thompson</span>
+                                <span class="conversation-time">2 days</span>
+                            </div>
+                            <div class="conversation-message">
+                                <p>Are you going to attend the tech conference next week?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversation">
+                        <div class="conversation-avatar">
+                            <img src="../img/avatar-5.jpg" alt="Emily Davis">
+                            <span class="status-indicator offline"></span>
+                        </div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <span class="conversation-name">Emily Davis</span>
+                                <span class="conversation-time">3 days</span>
+                            </div>
+                            <div class="conversation-message">
+                                <p>I think we should catch up soon!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="messages-main">
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <img src="../img/avatar-1.jpg" alt="Jane Smith" class="avatar-small">
+                        <div class="chat-user-details">
+                            <h3>Jane Smith</h3>
+                            <span class="online-status">Online</span>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="chat-action-btn"><i class="fas fa-phone"></i></button>
+                        <button class="chat-action-btn"><i class="fas fa-video"></i></button>
+                        <button class="chat-action-btn"><i class="fas fa-info-circle"></i></button>
+                        <div class="chat-menu">
+                            <button class="chat-menu-btn"><i class="fas fa-ellipsis-v"></i></button>
+                            <div class="dropdown-menu">
+                                <a href="#"><i class="fas fa-user-plus"></i> Add to Group</a>
+                                <a href="#"><i class="fas fa-bell-slash"></i> Mute Notifications</a>
+                                <a href="#"><i class="fas fa-search"></i> Search in Conversation</a>
+                                <a href="#"><i class="fas fa-trash"></i> Delete Conversation</a>
+                                <a href="#"><i class="fas fa-ban"></i> Block User</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-body">
+                    <div class="message-date-divider">
+                        <span>Today</span>
+                    </div>
+                    
+                    <div class="message-group received">
+                        <img src="../img/avatar-1.jpg" alt="Jane Smith" class="message-avatar">
+                        <div class="message-content">
+                            <div class="message">
+                                <p>Hey there! How are you doing today?</p>
+                                <span class="message-time">10:15 AM</span>
+                            </div>
+                            <div class="message">
+                                <p>Just checking in about the upcoming event this weekend.</p>
+                                <span class="message-time">10:16 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="message-group sent">
+                        <div class="message-content">
+                            <div class="message">
+                                <p>Hi Jane! I'm doing great, thanks for asking!</p>
+                                <span class="message-time">10:18 AM</span>
+                            </div>
+                            <div class="message">
+                                <p>Yes, I'm definitely attending the event. Looking forward to it!</p>
+                                <span class="message-time">10:18 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="message-group received">
+                        <img src="../img/avatar-1.jpg" alt="Jane Smith" class="message-avatar">
+                        <div class="message-content">
+                            <div class="message">
+                                <p>That's great! I was thinking we could meet up a bit earlier to grab coffee before the event starts. What do you think?</p>
+                                <span class="message-time">10:20 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="message-group sent">
+                        <div class="message-content">
+                            <div class="message">
+                                <p>That sounds like a perfect plan! There's a nice café near the venue that I've been wanting to try.</p>
+                                <span class="message-time">10:22 AM</span>
+                            </div>
+                            <div class="message">
+                                <p>Shall we meet there around 2 PM?</p>
+                                <span class="message-time">10:22 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="message-group received">
+                        <img src="../img/avatar-1.jpg" alt="Jane Smith" class="message-avatar">
+                        <div class="message-content">
+                            <div class="message">
+                                <p>Perfect! 2 PM works for me. Looking forward to it!</p>
+                                <span class="message-time">10:25 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-footer">
+                    <button class="attachment-btn"><i class="fas fa-paperclip"></i></button>
+                    <div class="message-input-wrapper">
+                        <input type="text" class="message-input" placeholder="Type a message...">
+                        <div class="message-input-actions">
+                            <button class="emoji-btn"><i class="far fa-smile"></i></button>
+                            <button class="gif-btn"><i class="fas fa-film"></i></button>
+                        </div>
+                    </div>
+                    <button class="send-message-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="forum.html">Forums</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="guidelines.html">Community Guidelines</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/messages.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html" class="active"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="logged-out-controls">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-register">Register</a>
+                </div>
+                <!-- User logged in controls (initially hidden) -->
+                <div class="logged-in-controls hide">
+                    <div class="user-profile-menu">
+                        <img src="../img/default-avatar.png" alt="User Avatar" class="avatar-small">
+                        <div class="dropdown-menu">
+                            <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="search-container">
+            <div class="search-header">
+                <h2>Search ConnectHub</h2>
+                <form class="search-form">
+                    <div class="search-input-group">
+                        <input type="text" id="search-query" placeholder="Search for posts, topics, users...">
+                        <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <label for="content-type">Content Type</label>
+                            <select id="content-type">
+                                <option value="all">All Content</option>
+                                <option value="posts">Posts</option>
+                                <option value="topics">Topics</option>
+                                <option value="users">Users</option>
+                                <option value="forums">Forums</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="date-range">Date Range</label>
+                            <select id="date-range">
+                                <option value="all-time">All Time</option>
+                                <option value="today">Today</option>
+                                <option value="this-week">This Week</option>
+                                <option value="this-month">This Month</option>
+                                <option value="this-year">This Year</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="sort-by">Sort By</label>
+                            <select id="sort-by">
+                                <option value="relevance">Relevance</option>
+                                <option value="newest">Newest</option>
+                                <option value="oldest">Oldest</option>
+                                <option value="most-commented">Most Commented</option>
+                                <option value="most-liked">Most Liked</option>
+                            </select>
+                        </div>
+                        <button type="button" class="advanced-filters-toggle">Advanced Filters <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="advanced-filters hide">
+                        <div class="filter-row">
+                            <div class="filter-group">
+                                <label for="category">Category</label>
+                                <select id="category">
+                                    <option value="">All Categories</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="science">Science</option>
+                                    <option value="gaming">Gaming</option>
+                                    <option value="sports">Sports</option>
+                                    <option value="entertainment">Entertainment</option>
+                                    <option value="lifestyle">Lifestyle</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="tags">Tags</label>
+                                <input type="text" id="tags" placeholder="Separate tags with commas">
+                            </div>
+                        </div>
+                        <div class="filter-row">
+                            <div class="filter-group">
+                                <label>Post Features</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="has-images"> Has Images</label>
+                                    <label><input type="checkbox" name="has-videos"> Has Videos</label>
+                                    <label><input type="checkbox" name="has-polls"> Has Polls</label>
+                                    <label><input type="checkbox" name="has-attachments"> Has Attachments</label>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label>User Status</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="verified-users"> Verified Users</label>
+                                    <label><input type="checkbox" name="moderators"> Moderators</label>
+                                    <label><input type="checkbox" name="admins"> Admins</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="search-results">
+                <div class="results-header">
+                    <h3>Search Results</h3>
+                    <p class="results-count">Showing <span id="result-count">0</span> results</p>
+                </div>
+                
+                <div class="results-container">
+                    <!-- Search results will be populated here -->
+                    <div class="empty-results">
+                        <i class="fas fa-search fa-4x"></i>
+                        <h3>No search results yet</h3>
+                        <p>Enter a search query above to find posts, topics, and users</p>
+                    </div>
+                </div>
+                
+                <div class="pagination hide">
+                    <button class="pagination-btn prev-page" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                    <div class="page-numbers">
+                        <button class="page-number active">1</button>
+                        <button class="page-number">2</button>
+                        <button class="page-number">3</button>
+                        <span class="page-ellipsis">...</span>
+                        <button class="page-number">10</button>
+                    </div>
+                    <button class="pagination-btn next-page">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="forum.html">Forums</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="guidelines.html">Community Guidelines</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

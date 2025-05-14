@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html" class="active"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="logged-out-controls">
+                    <a href="login.html" class="btn btn-login">Login</a>
+                    <a href="register.html" class="btn btn-register">Register</a>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="content-grid">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <div class="widget categories-widget">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-laptop-code"></i> Technology</a></li>
+                        <li><a href="#"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                        <li><a href="#"><i class="fas fa-film"></i> Entertainment</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Education</a></li>
+                        <li><a href="#"><i class="fas fa-briefcase"></i> Business</a></li>
+                        <li><a href="#"><i class="fas fa-heartbeat"></i> Health</a></li>
+                        <li><a href="#"><i class="fas fa-palette"></i> Art & Design</a></li>
+                        <li><a href="#"><i class="fas fa-utensils"></i> Food</a></li>
+                    </ul>
+                    <a href="#" class="view-more">View All Categories</a>
+                </div>
+                
+                <div class="widget trending-topics">
+                    <h3>Trending Topics</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#ArtificialIntelligence</span>
+                                <span class="post-count">238 posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#WebDevelopment</span>
+                                <span class="post-count">185 posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#GamingSetup</span>
+                                <span class="post-count">142 posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#RemoteWork</span>
+                                <span class="post-count">120 posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="topic-tag">#MentalHealth</span>
+                                <span class="post-count">98 posts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Feed -->
+            <section class="post-feed">
+                <div class="feed-filter">
+                    <div class="filter-options">
+                        <button class="active">All Forums</button>
+                        <button>Popular</button>
+                        <button>Recent</button>
+                        <button>Recommended</button>
+                    </div>
+                </div>
+
+                <div class="posts-container">
+                    <!-- Forum Post 1 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="/api/placeholder/40/40" alt="User Avatar" class="avatar-small">
+                            <div class="post-info">
+                                <div class="post-author">
+                                    <span class="author-name">TechEnthusiast</span>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-time">Posted 2 hours ago</span>
+                                    <span class="post-category">in <a href="#">Technology</a></span>
+                                </div>
+                            </div>
+                            <div class="post-actions-menu">
+                                <button class="post-menu-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#"><i class="fas fa-bookmark"></i> Save Post</a>
+                                    <a href="#"><i class="fas fa-flag"></i> Report</a>
+                                    <a href="#"><i class="fas fa-volume-mute"></i> Mute User</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3>The Future of Web Development: What to Expect in 2025</h3>
+                            <p>With the rapid advancement of technologies like AI and WebAssembly, the web development landscape is changing faster than ever. What skills should developers focus on?</p>
+                            <p>I'm particularly interested in hearing thoughts on the role of no-code/low-code platforms and whether they'll replace traditional development for certain applications.</p>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-reactions">
+                                <button class="reaction-btn like-btn"><i class="far fa-heart"></i> <span>128</span></button>
+                                <button class="reaction-btn comment-btn"><i class="far fa-comment"></i> <span>56</span></button>
+                                <button class="reaction-btn share-btn"><i class="far fa-share-square"></i> <span>Share</span></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Forum Post 2 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="/api/placeholder/40/40" alt="User Avatar" class="avatar-small">
+                            <div class="post-info">
+                                <div class="post-author">
+                                    <span class="author-name">GameDeveloper</span>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-time">Posted 5 hours ago</span>
+                                    <span class="post-category">in <a href="#">Gaming</a></span>
+                                </div>
+                            </div>
+                            <div class="post-actions-menu">
+                                <button class="post-menu-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#"><i class="fas fa-bookmark"></i> Save Post</a>
+                                    <a href="#"><i class="fas fa-flag"></i> Report</a>
+                                    <a href="#"><i class="fas fa-volume-mute"></i> Mute User</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3>Poll: Most Anticipated Game of 2025</h3>
+                            <p>With so many exciting titles announced for next year, I'm curious which ones the community is most looking forward to!</p>
+                            <div class="post-poll">
+                                <h4>Which game are you most excited for?</h4>
+                                <div class="poll-options">
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" name="game-poll" id="option1">
+                                            <label for="option1">Elder Scrolls VI</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 45%;"></div>
+                                            <span class="poll-percentage">45%</span>
+                                        </div>
+                                    </div>
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" name="game-poll" id="option2">
+                                            <label for="option2">GTA VI</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 30%;"></div>
+                                            <span class="poll-percentage">30%</span>
+                                        </div>
+                                    </div>
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" name="game-poll" id="option3">
+                                            <label for="option3">Cyberpunk 2077 Sequel</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 15%;"></div>
+                                            <span class="poll-percentage">15%</span>
+                                        </div>
+                                    </div>
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" name="game-poll" id="option4">
+                                            <label for="option4">Other (comment below)</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 10%;"></div>
+                                            <span class="poll-percentage">10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="poll-footer">
+                                    <span>250 votes</span>
+                                    <span>3 days left</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-reactions">
+                                <button class="reaction-btn like-btn"><i class="far fa-heart"></i> <span>95</span></button>
+                                <button class="reaction-btn comment-btn"><i class="far fa-comment"></i> <span>42</span></button>
+                                <button class="reaction-btn share-btn"><i class="far fa-share-square"></i> <span>Share</span></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Forum Post 3 -->
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="/api/placeholder/40/40" alt="User Avatar" class="avatar-small">
+                            <div class="post-info">
+                                <div class="post-author">
+                                    <span class="author-name">HealthCoach</span>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-time">Posted yesterday</span>
+                                    <span class="post-category">in <a href="#">Health</a></span>
+                                </div>
+                            </div>
+                            <div class="post-actions-menu">
+                                <button class="post-menu-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#"><i class="fas fa-bookmark"></i> Save Post</a>
+                                    <a href="#"><i class="fas fa-flag"></i> Report</a>
+                                    <a href="#"><i class="fas fa-volume-mute"></i> Mute User</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3>Tips for Maintaining Mental Health While Working From Home</h3>
+                            <p>As remote work continues to be popular, many people struggle with maintaining work-life balance and mental well-being. Here are some strategies that have helped me:</p>
+                            <p>1. Create a dedicated workspace<br>
+                               2. Establish clear working hours<br>
+                               3. Take regular breaks and get some fresh air<br>
+                               4. Stay connected with colleagues virtually<br>
+                               5. Practice mindfulness and relaxation techniques</p>
+                            <p>What works for you? Share your own tips in the comments!</p>
+                            <img src="/api/placeholder/600/300" alt="Home office setup" class="post-image">
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-reactions">
+                                <button class="reaction-btn like-btn"><i class="far fa-heart"></i> <span>215</span></button>
+                                <button class="reaction-btn comment-btn"><i class="far fa-comment"></i> <span>78</span></button>
+                                <button class="reaction-btn share-btn"><i class="far fa-share-square"></i> <span>Share</span></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <button class="load-more-btn">Load More Posts</button>
+                </div>
+            </section>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <a href="create-post.html" class="btn btn-create-post btn-block">
+                        <i class="fas fa-plus"></i> Create New Post
+                    </a>
+                </div>
+
+                <div class="widget user-suggestions">
+                    <h3>Suggested Forums</h3>
+                    <div class="user-suggestion">
+                        <img src="/api/placeholder/40/40" alt="Forum Icon" class="avatar-small">
+                        <div class="user-info">
+                            <span class="user-name">Web Development</span>
+                            <span class="user-meta">15.3K members</span>
+                        </div>
+                        <button class="follow-btn">Join</button>
+                    </div>
+                    <div class="user-suggestion">
+                        <img src="/api/placeholder/40/40" alt="Forum Icon" class="avatar-small">
+                        <div class="user-info">
+                            <span class="user-name">Digital Marketing</span>
+                            <span class="user-meta">8.7K members</span>
+                        </div>
+                        <button class="follow-btn">Join</button>
+                    </div>
+                    <div class="user-suggestion">
+                        <img src="/api/placeholder/40/40" alt="Forum Icon" class="avatar-small">
+                        <div class="user-info">
+                            <span class="user-name">UX/UI Design</span>
+                            <span class="user-meta">12.1K members</span>
+                        </div>
+                        <button class="follow-btn">Join</button>
+                    </div>
+                    <a href="#" class="see-more">See More Forums</a>
+                </div>
+
+                <div class="widget advertisement">
+                    <span class="ad-label">Advertisement</span>
+                    <div class="ad-content">
+                        <img src="/api/placeholder/300/250" alt="Advertisement">
+                    </div>
+                </div>
+
+                <div class="widget event-list">
+                    <h3>Upcoming Events</h3>
+                    <div class="event">
+                        <div class="event-date">
+                            <span class="month">May</span>
+                            <span class="day">15</span>
+                        </div>
+                        <div class="event-details">
+                            <h4 class="event-title">Web Dev Conference 2025</h4>
+                            <div class="event-location"><i class="fas fa-map-marker-alt"></i> Virtual Event</div>
+                            <div class="event-attendance">
+                                <span class="attendees-count">156 going</span>
+                                <button class="interested-btn">Interested</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-date">
+                            <span class="month">May</span>
+                            <span class="day">22</span>
+                        </div>
+                        <div class="event-details">
+                            <h4 class="event-title">AI in Business Meetup</h4>
+                            <div class="event-location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</div>
+                            <div class="event-attendance">
+                                <span class="attendees-count">89 going</span>
+                                <button class="interested-btn">Interested</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="see-more">See All Events</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="forum.html">Forums</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="guidelines.html">Community Guidelines</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+</body>
+</html>

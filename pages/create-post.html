@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="user-profile-menu">
+                    <img src="../img/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                    <div class="dropdown-menu">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                        <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="create-post-container">
+            <div class="content-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-pen-to-square"></i> Create New Post</h2>
+                </div>
+                <div class="card-body">
+                    <form class="create-post-form" id="create-post-form">
+                        <div class="form-group">
+                            <label for="post-title">Post Title</label>
+                            <input type="text" id="post-title" name="post-title" placeholder="Enter a descriptive title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="post-category">Category</label>
+                            <select id="post-category" name="post-category" required>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="technology">Technology</option>
+                                <option value="sports">Sports</option>
+                                <option value="health">Health & Fitness</option>
+                                <option value="gaming">Gaming</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="science">Science</option>
+                                <option value="education">Education</option>
+                                <option value="travel">Travel</option>
+                                <option value="food">Food & Cooking</option>
+                                <option value="art">Art & Design</option>
+                                <option value="finance">Finance</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post-tags">Tags (separated by commas)</label>
+                            <input type="text" id="post-tags" name="post-tags" placeholder="e.g., technology, coding, webdev">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post-content">Content</label>
+                            <div class="rich-text-toolbar">
+                                <button type="button" class="toolbar-btn"><i class="fas fa-bold"></i></button>
+                                <button type="button" class="toolbar-btn"><i class="fas fa-italic"></i></button>
+                                <button type="button" class="toolbar-btn"><i class="fas fa-underline"></i></button>
+                                <button type="button" class="toolbar-btn"><i class="fas fa-list-ul"></i></button>
+                                <button type="button" class="toolbar-btn"><i class="fas fa-list-ol"></i></button>
+                                <button type="button" class="toolbar-btn"><i class="fas fa-link"></i></button>
+                                <button type="button" class="toolbar-btn"><i class="fas fa-image"></i></button>
+                                <button type="button" class="toolbar-btn"><i class="fas fa-code"></i></button>
+                                <button type="button" class="toolbar-btn"><i class="fas fa-quote-right"></i></button>
+                            </div>
+                            <textarea id="post-content" name="post-content" rows="10" placeholder="Write your post content here..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post-image">Add Image (optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="post-image" name="post-image" accept="image/*">
+                                <div class="file-upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Drag and drop an image or click to browse</p>
+                                    <span>Max file size: 5MB</span>
+                                </div>
+                                <div class="image-preview hide">
+                                    <img src="#" alt="Image Preview">
+                                    <button type="button" class="remove-image"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="create-poll-toggle">
+                                <input type="checkbox" id="add-poll" name="add-poll">
+                                <label for="add-poll">Add a poll to this post</label>
+                            </div>
+                        </div>
+
+                        <div class="poll-creator hide">
+                            <div class="form-group">
+                                <label for="poll-question">Poll Question</label>
+                                <input type="text" id="poll-question" name="poll-question" placeholder="Ask a question for your poll">
+                            </div>
+
+                            <div class="poll-options">
+                                <div class="poll-option-input">
+                                    <label>Option 1</label>
+                                    <input type="text" name="poll-option-1" placeholder="Enter an option">
+                                </div>
+                                <div class="poll-option-input">
+                                    <label>Option 2</label>
+                                    <input type="text" name="poll-option-2" placeholder="Enter an option">
+                                </div>
+                            </div>
+
+                            <button type="button" class="add-poll-option"><i class="fas fa-plus"></i> Add Another Option</button>
+
+                            <div class="form-group">
+                                <label for="poll-duration">Poll Duration</label>
+                                <select id="poll-duration" name="poll-duration">
+                                    <option value="1">1 day</option>
+                                    <option value="3">3 days</option>
+                                    <option value="7" selected>1 week</option>
+                                    <option value="14">2 weeks</option>
+                                    <option value="30">1 month</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <div class="post-visibility">
+                                <label>Post Visibility:</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="public" name="visibility" value="public" checked>
+                                    <label for="public">Public</label>
+                                    <input type="radio" id="followers" name="visibility" value="followers">
+                                    <label for="followers">Followers Only</label>
+                                </div>
+                            </div>
+                            <div class="allow-comments">
+                                <input type="checkbox" id="comments-enabled" name="comments-enabled" checked>
+                                <label for="comments-enabled">Allow comments</label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Save as Draft</button>
+                            <button type="submit" class="btn btn-primary">Publish Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="forum.html">Forums</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="guidelines.html">Community Guidelines</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/create-post.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html" class="active"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="user-profile-menu">
+                    <img src="../img/avatar-placeholder.jpg" alt="Profile" class="avatar-small">
+                    <div class="dropdown-menu">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a>
+                        <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="content-grid">
+            <!-- Left Sidebar -->
+            <div class="sidebar">
+                <div class="widget categories-widget">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="user-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="messages.html"><i class="fas fa-envelope"></i> Messages</a></li>
+                        <li><a href="notifications.html" class="active"><i class="fas fa-bell"></i> Notifications</a></li>
+                        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="create-post.html"><i class="fas fa-plus-circle"></i> Create Post</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Notifications Column -->
+            <div class="notifications-content">
+                <div class="widget">
+                    <h3>Notifications</h3>
+                    
+                    <div class="notifications-filter">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Mentions</button>
+                        <button class="filter-btn">Likes</button>
+                        <button class="filter-btn">Comments</button>
+                        <button class="filter-btn">Followers</button>
+                    </div>
+                    
+                    <div class="notifications-list">
+                        <!-- Notification Item: New Like -->
+                        <div class="notification-item unread">
+                            <div class="notification-avatar">
+                                <img src="../img/avatar-placeholder.jpg" alt="User" class="avatar-small">
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Jane Smith</strong> liked your post <a href="#">"10 Tips for Better Productivity"</a></p>
+                                <span class="notification-time">5 minutes ago</span>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="mark-read-btn"><i class="fas fa-check"></i></button>
+                                <div class="notification-menu">
+                                    <button class="notification-menu-btn"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#"><i class="fas fa-eye"></i> Mark as read</a>
+                                        <a href="#"><i class="fas fa-times"></i> Dismiss</a>
+                                        <a href="#"><i class="fas fa-bell-slash"></i> Turn off notifications from this user</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notification Item: New Comment -->
+                        <div class="notification-item unread">
+                            <div class="notification-avatar">
+                                <img src="../img/avatar-placeholder.jpg" alt="User" class="avatar-small">
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>John Doe</strong> commented on your post <a href="#">"My Recent Trip to Europe"</a>: "Amazing photos! Which camera did you use?"</p>
+                                <span class="notification-time">15 minutes ago</span>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="mark-read-btn"><i class="fas fa-check"></i></button>
+                                <div class="notification-menu">
+                                    <button class="notification-menu-btn"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#"><i class="fas fa-eye"></i> Mark as read</a>
+                                        <a href="#"><i class="fas fa-times"></i> Dismiss</a>
+                                        <a href="#"><i class="fas fa-bell-slash"></i> Turn off notifications from this user</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notification Item: New Follower -->
+                        <div class="notification-item">
+                            <div class="notification-avatar">
+                                <img src="../img/avatar-placeholder.jpg" alt="User" class="avatar-small">
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Emma Wilson</strong> started following you</p>
+                                <span class="notification-time">1 hour ago</span>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="mark-read-btn"><i class="fas fa-check"></i></button>
+                                <div class="notification-menu">
+                                    <button class="notification-menu-btn"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#"><i class="fas fa-eye"></i> Mark as read</a>
+                                        <a href="#"><i class="fas fa-times"></i> Dismiss</a>
+                                        <a href="#"><i class="fas fa-bell-slash"></i> Turn off notifications from this user</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notification Item: Mention -->
+                        <div class="notification-item">
+                            <div class="notification-avatar">
+                                <img src="../img/avatar-placeholder.jpg" alt="User" class="avatar-small">
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Alex Johnson</strong> mentioned you in a comment: "I agree with @username, this is a great topic!"</p>
+                                <span class="notification-time">2 hours ago</span>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="mark-read-btn"><i class="fas fa-check"></i></button>
+                                <div class="notification-menu">
+                                    <button class="notification-menu-btn"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#"><i class="fas fa-eye"></i> Mark as read</a>
+                                        <a href="#"><i class="fas fa-times"></i> Dismiss</a>
+                                        <a href="#"><i class="fas fa-bell-slash"></i> Turn off notifications from this user</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notification Item: Post Recommendation -->
+                        <div class="notification-item">
+                            <div class="notification-avatar">
+                                <i class="fas fa-lightbulb notification-icon"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p>Based on your interests, you might like <a href="#">"The Future of Remote Work"</a> by Michael Brown</p>
+                                <span class="notification-time">5 hours ago</span>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="mark-read-btn"><i class="fas fa-check"></i></button>
+                                <div class="notification-menu">
+                                    <button class="notification-menu-btn"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#"><i class="fas fa-eye"></i> Mark as read</a>
+                                        <a href="#"><i class="fas fa-times"></i> Dismiss</a>
+                                        <a href="#"><i class="fas fa-bell-slash"></i> Turn off recommendations</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notification Item: System -->
+                        <div class="notification-item">
+                            <div class="notification-avatar">
+                                <i class="fas fa-cog notification-icon"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p>Your account password was recently changed. If this wasn't you, please <a href="#">secure your account</a>.</p>
+                                <span class="notification-time">1 day ago</span>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="mark-read-btn"><i class="fas fa-check"></i></button>
+                                <div class="notification-menu">
+                                    <button class="notification-menu-btn"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#"><i class="fas fa-eye"></i> Mark as read</a>
+                                        <a href="#"><i class="fas fa-times"></i> Dismiss</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="load-more-btn">Load More Notifications</button>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="sidebar">
+                <div class="widget">
+                    <h3>Notification Settings</h3>
+                    <div class="notification-settings">
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <span>Email Notifications</span>
+                                <p class="setting-description">Receive notifications via email</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <span>Push Notifications</span>
+                                <p class="setting-description">Receive notifications on your browser</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <span>Comments</span>
+                                <p class="setting-description">When someone comments on your posts</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <span>Likes</span>
+                                <p class="setting-description">When someone likes your content</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <span>Mentions</span>
+                                <p class="setting-description">When someone mentions you</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <span>New Followers</span>
+                                <p class="setting-description">When someone follows you</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-label">
+                                <span>Recommendations</span>
+                                <p class="setting-description">Content suggestions based on your interests</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <a href="settings.html" class="btn btn-primary btn-block">Manage All Settings</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="forum.html">Forums</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="guidelines.html">Community Guidelines</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/notifications.js"></script>
+</body>
+</html>

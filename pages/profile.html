@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - ConnectHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">ConnectHub</a></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> <span>Forums</span></a></li>
+                    <li><a href="search.html"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope"></i> <span>Messages</span></a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-controls">
+                <div class="user-profile-menu">
+                    <img src="../images/avatar-default.jpg" alt="User Profile" class="avatar-small">
+                    <div class="dropdown-menu">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="user-dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+                <a href="create-post.html" class="btn btn-create-post">
+                    <i class="fas fa-plus"></i>
+                    <span>Create Post</span>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <div class="profile-header">
+            <div class="profile-cover">
+                <img src="../images/profile-cover-default.jpg" alt="Profile Cover">
+                <button class="edit-cover-btn"><i class="fas fa-camera"></i> Change Cover</button>
+            </div>
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="../images/avatar-default.jpg" alt="User Profile">
+                    <button class="edit-avatar-btn"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="profile-details">
+                    <h1 class="profile-name">Jane Doe <i class="fas fa-check-circle verified-badge"></i></h1>
+                    <p class="profile-username">@janedoe</p>
+                    <p class="profile-bio">Digital creator, tech enthusiast, and coffee lover. Sharing my journey and connecting with like-minded people.</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-value">156</span>
+                            <span class="stat-label">Posts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">2.5k</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">943</span>
+                            <span class="stat-label">Following</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn btn-follow"><i class="fas fa-user-plus"></i> Follow</button>
+                    <button class="btn btn-message"><i class="fas fa-envelope"></i> Message</button>
+                    <button class="btn btn-more"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-navigation">
+            <nav class="profile-nav">
+                <ul>
+                    <li><a href="#" class="active">Posts</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Friends</a></li>
+                    <li><a href="#">Groups</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content-grid">
+            <div class="sidebar">
+                <div class="widget about-widget">
+                    <h3>About</h3>
+                    <ul class="about-list">
+                        <li><i class="fas fa-briefcase"></i> UI/UX Designer at CreativeTech</li>
+                        <li><i class="fas fa-graduation-cap"></i> Studied Design at Art Institute</li>
+                        <li><i class="fas fa-home"></i> Lives in New York, USA</li>
+                        <li><i class="fas fa-map-marker-alt"></i> From San Francisco, CA</li>
+                        <li><i class="fas fa-heart"></i> Single</li>
+                        <li><i class="fas fa-calendar-alt"></i> Joined June 2020</li>
+                    </ul>
+                    <a href="#" class="view-more">See More</a>
+                </div>
+
+                <div class="widget photos-widget">
+                    <h3>Photos</h3>
+                    <div class="photo-grid">
+                        <div class="photo-item"><img src="../images/photo-1.jpg" alt="Photo"></div>
+                        <div class="photo-item"><img src="../images/photo-2.jpg" alt="Photo"></div>
+                        <div class="photo-item"><img src="../images/photo-3.jpg" alt="Photo"></div>
+                        <div class="photo-item"><img src="../images/photo-4.jpg" alt="Photo"></div>
+                        <div class="photo-item"><img src="../images/photo-5.jpg" alt="Photo"></div>
+                        <div class="photo-item"><img src="../images/photo-6.jpg" alt="Photo"></div>
+                        <div class="photo-item"><img src="../images/photo-7.jpg" alt="Photo"></div>
+                        <div class="photo-item"><img src="../images/photo-8.jpg" alt="Photo"></div>
+                        <div class="photo-item"><img src="../images/photo-9.jpg" alt="Photo"></div>
+                    </div>
+                    <a href="#" class="view-more">See All Photos</a>
+                </div>
+
+                <div class="widget friends-widget">
+                    <h3>Friends</h3>
+                    <div class="friends-grid">
+                        <div class="friend-item">
+                            <img src="../images/friend-1.jpg" alt="Friend">
+                            <span class="friend-name">Alex Johnson</span>
+                        </div>
+                        <div class="friend-item">
+                            <img src="../images/friend-2.jpg" alt="Friend">
+                            <span class="friend-name">Maria Garcia</span>
+                        </div>
+                        <div class="friend-item">
+                            <img src="../images/friend-3.jpg" alt="Friend">
+                            <span class="friend-name">Sam Wilson</span>
+                        </div>
+                        <div class="friend-item">
+                            <img src="../images/friend-4.jpg" alt="Friend">
+                            <span class="friend-name">Emma Taylor</span>
+                        </div>
+                        <div class="friend-item">
+                            <img src="../images/friend-5.jpg" alt="Friend">
+                            <span class="friend-name">David Kim</span>
+                        </div>
+                        <div class="friend-item">
+                            <img src="../images/friend-6.jpg" alt="Friend">
+                            <span class="friend-name">Laura Chen</span>
+                        </div>
+                    </div>
+                    <a href="#" class="view-more">See All Friends</a>
+                </div>
+            </div>
+
+            <div class="post-feed">
+                <div class="create-post">
+                    <div class="post-form">
+                        <img src="../images/avatar-default.jpg" alt="User Profile" class="avatar-small">
+                        <input type="text" placeholder="Share what's on your mind, Jane..." class="post-input">
+                        <button class="post-submit-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="post-options">
+                        <button class="post-option-btn"><i class="fas fa-image"></i> Photo/Video</button>
+                        <button class="post-option-btn"><i class="fas fa-poll"></i> Poll</button>
+                        <button class="post-option-btn"><i class="fas fa-map-marker-alt"></i> Check In</button>
+                    </div>
+                </div>
+
+                <div class="posts-container">
+                    <!-- Post 1 -->
+                    <div class="post">
+                        <div class="post-header">
+                            <img src="../images/avatar-default.jpg" alt="User Profile" class="avatar-small">
+                            <div class="post-info">
+                                <div class="post-author">
+                                    <a href="#" class="author-name">Jane Doe</a>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-time">2 hours ago</span>
+                                    <span class="post-visibility"><i class="fas fa-globe"></i> Public</span>
+                                </div>
+                            </div>
+                            <div class="post-actions-menu">
+                                <button class="post-menu-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#"><i class="fas fa-bookmark"></i> Save Post</a>
+                                    <a href="#"><i class="fas fa-edit"></i> Edit Post</a>
+                                    <a href="#"><i class="fas fa-trash-alt"></i> Delete Post</a>
+                                    <a href="#"><i class="fas fa-bell-slash"></i> Turn Off Notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Just finished designing my new portfolio website! It's been a challenging project but I'm really happy with the results. Would love to hear your thoughts!</p>
+                            <img src="../images/post-image-1.jpg" alt="Post Image" class="post-image">
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-reactions">
+                                <button class="reaction-btn like-btn"><i class="fas fa-heart"></i> <span>248</span></button>
+                                <button class="reaction-btn comment-btn"><i class="fas fa-comment"></i> <span>42</span></button>
+                                <button class="reaction-btn share-btn"><i class="fas fa-share"></i> <span>18</span></button>
+                            </div>
+                        </div>
+                        <div class="comments-section">
+                            <div class="comments-container">
+                                <div class="comment">
+                                    <img src="../images/friend-1.jpg" alt="User Profile" class="avatar-small">
+                                    <div class="comment-content">
+                                        <div class="comment-header">
+                                            <a href="#" class="commenter-name">Alex Johnson</a>
+                                            <span class="comment-time">45 minutes ago</span>
+                                        </div>
+                                        <p>Looks amazing! Love the color scheme and layout.</p>
+                                        <div class="comment-actions">
+                                            <button class="comment-like-btn"><i class="fas fa-heart"></i> <span>14</span></button>
+                                            <button class="comment-reply-btn"><i class="fas fa-reply"></i> Reply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <img src="../images/friend-2.jpg" alt="User Profile" class="avatar-small">
+                                    <div class="comment-content">
+                                        <div class="comment-header">
+                                            <a href="#" class="commenter-name">Maria Garcia</a>
+                                            <span class="comment-time">30 minutes ago</span>
+                                        </div>
+                                        <p>Great job! The responsive design works perfectly on mobile too.</p>
+                                        <div class="comment-actions">
+                                            <button class="comment-like-btn"><i class="fas fa-heart"></i> <span>8</span></button>
+                                            <button class="comment-reply-btn"><i class="fas fa-reply"></i> Reply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-form">
+                                <img src="../images/avatar-default.jpg" alt="User Profile" class="avatar-small">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="submit-comment-btn"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="post">
+                        <div class="post-header">
+                            <img src="../images/avatar-default.jpg" alt="User Profile" class="avatar-small">
+                            <div class="post-info">
+                                <div class="post-author">
+                                    <a href="#" class="author-name">Jane Doe</a>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-time">1 day ago</span>
+                                    <span class="post-visibility"><i class="fas fa-globe"></i> Public</span>
+                                </div>
+                            </div>
+                            <div class="post-actions-menu">
+                                <button class="post-menu-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                <div class="dropdown-menu">
+                                    <a href="#"><i class="fas fa-bookmark"></i> Save Post</a>
+                                    <a href="#"><i class="fas fa-edit"></i> Edit Post</a>
+                                    <a href="#"><i class="fas fa-trash-alt"></i> Delete Post</a>
+                                    <a href="#"><i class="fas fa-bell-slash"></i> Turn Off Notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>What's your favorite design tool? I'm thinking about trying something new.</p>
+                            <div class="post-poll">
+                                <h4>Favorite Design Tool</h4>
+                                <div class="poll-options">
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" id="option1" name="poll">
+                                            <label for="option1">Adobe XD</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 45%;"></div>
+                                            <span class="poll-percentage">45%</span>
+                                        </div>
+                                    </div>
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" id="option2" name="poll">
+                                            <label for="option2">Figma</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 30%;"></div>
+                                            <span class="poll-percentage">30%</span>
+                                        </div>
+                                    </div>
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" id="option3" name="poll">
+                                            <label for="option3">Sketch</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 20%;"></div>
+                                            <span class="poll-percentage">20%</span>
+                                        </div>
+                                    </div>
+                                    <div class="poll-option">
+                                        <div class="poll-option-label">
+                                            <input type="radio" id="option4" name="poll">
+                                            <label for="option4">Other</label>
+                                        </div>
+                                        <div class="poll-progress">
+                                            <div class="progress-bar" style="width: 5%;"></div>
+                                            <span class="poll-percentage">5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="poll-footer">
+                                    <span>156 votes</span>
+                                    <span>2 days left</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-reactions">
+                                <button class="reaction-btn like-btn"><i class="fas fa-heart"></i> <span>126</span></button>
+                                <button class="reaction-btn comment-btn"><i class="fas fa-comment"></i> <span>78</span></button>
+                                <button class="reaction-btn share-btn"><i class="fas fa-share"></i> <span>12</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn load-more-btn">Load More Posts</button>
+            </div>
+
+            <div class="sidebar right-sidebar">
+                <div class="widget event-widget">
+                    <h3>Upcoming Events</h3>
+                    <div class="event-list">
+                        <div class="event">
+                            <div class="event-date">
+                                <span class="month">May</span>
+                                <span class="day">20</span>
+                            </div>
+                            <div class="event-details">
+                                <h4 class="event-title">Design Meetup 2025</h4>
+                                <div class="event-location"><i class="fas fa-map-marker-alt"></i> New York Design Center</div>
+                                <div class="event-attendance">
+                                    <span class="attendees-count">128 going</span>
+                                    <button class="interested-btn">Interested</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-date">
+                                <span class="month">Jun</span>
+                                <span class="day">15</span>
+                            </div>
+                            <div class="event-details">
+                                <h4 class="event-title">UX Workshop</h4>
+                                <div class="event-location"><i class="fas fa-map-marker-alt"></i> Online Webinar</div>
+                                <div class="event-attendance">
+                                    <span class="attendees-count">95 going</span>
+                                    <button class="interested-btn">Interested</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="view-more">See All Events</a>
+                </div>
+
+                <div class="widget advertisement">
+                    <span class="ad-label">Advertisement</span>
+                    <div class="ad-content">
+                        <img src="../images/ad-1.jpg" alt="Advertisement">
+                    </div>
+                </div>
+
+                <div class="widget similar-profiles">
+                    <h3>Similar Profiles</h3>
+                    <div class="user-suggestions">
+                        <div class="user-suggestion">
+                            <img src="../images/similar-1.jpg" alt="User" class="avatar-small">
+                            <div class="user-info">
+                                <a href="#" class="user-name">Michael Brown</a>
+                                <span class="user-meta">UI/UX Designer</span>
+                            </div>
+                            <button class="follow-btn">Follow</button>
+                        </div>
+                        <div class="user-suggestion">
+                            <img src="../images/similar-2.jpg" alt="User" class="avatar-small">
+                            <div class="user-info">
+                                <a href="#" class="user-name">Sarah Parker</a>
+                                <span class="user-meta">Web Designer</span>
+                            </div>
+                            <button class="follow-btn">Follow</button>
+                        </div>
+                        <div class="user-suggestion">
+                            <img src="../images/similar-3.jpg" alt="User" class="avatar-small">
+                            <div class="user-info">
+                                <a href="#" class="user-name">Daniel Lee</a>
+                                <span class="user-meta">Graphic Designer</span>
+                            </div>
+                            <button class="follow-btn">Follow</button>
+                        </div>
+                    </div>
+                    <a href="#" class="see-more">See More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ConnectHub</h3>
+                    <p>A social media forum for connecting people with similar interests and fostering meaningful discussions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="forum.html">Forums</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="guidelines.html">Community Guidelines</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select class="language-select">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ConnectHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
